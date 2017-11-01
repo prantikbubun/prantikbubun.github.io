@@ -5,20 +5,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 
 <meta property="og:image" content="https://junyanz.github.io/CycleGAN/images/teaser_fb.jpg"/>
-<meta property="og:title" content="Grad-CAM++: Generalized Gradient-based Visual Explanations for Deep Convolutional Networks" />
+<meta property="og:title" content="Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks" />
 
 <script src="lib.js" type="text/javascript"></script>
 <script src="popup.js" type="text/javascript"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-53682931-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 <script type="text/javascript">
 // redefining default features
@@ -47,24 +38,23 @@ BODY {
 <body>
 
 <div id="primarycontent">
-<center><h1>Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</h1></center>
-<center><h2><a href="http://www.eecs.berkeley.edu/~junyanz/">Jun-Yan Zhu</a>*&nbsp;&nbsp;&nbsp;
-  <a href="https://taesung.me/">Taesung Park</a>*&nbsp;&nbsp;&nbsp;
-  <a href="http://web.mit.edu/phillipi/">Phillip Isola</a>&nbsp;&nbsp;&nbsp;
-  <a href="http://www.eecs.berkeley.edu/~efros/">Alexei A. Efros</a></h2></center>
-<center><h2><a href="http://bair.berkeley.edu/">UC Berkeley</a></h2></center>
-<center><h2>In ICCV 2017</h2></center>
-<center><h2><strong><a href="https://arxiv.org/pdf/1703.10593.pdf">[Paper]</a>  <a href="https://github.com/junyanz/CycleGAN">[Code (Torch)]</a>   <a href="https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix">[Code (PyTorch)]</a></strong> </h2></center>
-<center><a href="grad-campp.png">
-<img src="grad-campp.png" width="1000"> </a></center>
+<center><h1>Grad-CAM++: Generalized Gradient-based Visual Explanations for Deep Convolutional Networks</h1></center>
+<center><h2>Aditya Chattopadhay*&nbsp;&nbsp;&nbsp;
+  Anirban Sarkar*&nbsp;&nbsp;&nbsp;
+  Prantik Howlader*&nbsp;&nbsp;&nbsp;
+  Vineeth N Balasubramanian</h2></center>
+<center><h2><a href="https://www.iith.ac.in/">IIT Hyderabad</a></h2></center>
+<center><h2>In WACV 2018</h2></center>
+<center><h2><strong><a href="https://arxiv.org/pdf/1710.11063.pdf">[Paper]</a>  <a href="https://github.com/adityac94/Grad_CAM_plus_plus">[Code]</a> </strong> </h2></center>
+<center><a href="https://github.com/adityac94/Grad_CAM_plus_plus/tree/master/images/multiple_dogs.jpg">
+<img src="https://github.com/adityac94/Grad_CAM_plus_plus/tree/master/images/multiple_dogs.jpg" width="1000"> </a></center>
 <p></p>
 
 
  <p>
 <h2>Abstract</h2>
 
-<div style="font-size:14px"><p>Image-to-image translation is a class of vision and graphics problems where the goal is to learn the mapping between an input image and an output image using a training set of aligned image pairs.
-However, for many tasks, paired training data will not be available. We present an approach for learning to translate an image from a source domain X to a target domain Y in the absence of paired examples.  Our goal is to learn a mapping G: X &#8594 Y such that the distribution of images from G(X) is indistinguishable from the distribution Y using an adversarial loss. Because this mapping is highly under-constrained, we couple it with an inverse mapping F: Y &#8594 X and introduce a cycle consistency loss to push F(G(X)) &#8776 X (and vice versa). Qualitative results are presented on several tasks where paired training data does not exist, including collection style transfer, object transfiguration, season transfer, photo enhancement, etc.  Quantitative comparisons against several prior methods demonstrate the superiority of our approach.</p></div>
+<div style="font-size:14px"><p>Over the last decade, Convolutional Neural Network (CNN) models have been highly successful in solving complex vision based problems. However, deep models are perceived as "black box" methods considering the lack of understanding of their internal functioning. There has been a significant recent interest to develop explainable deep learning models, and this paper is an effort in this direction. Building on a recently proposed method called Grad-CAM, we propose Grad-CAM++ to provide better visual explanations of CNN model predictions (when compared to Grad-CAM), in terms of better localization of objects as well as explaining occurrences of multiple objects of a class in a single image. We provide a mathematical explanation for the proposed method, Grad-CAM++, which uses a weighted combination of the positive partial derivatives of the last convolutional layer feature maps with respect to a specific class score as weights to generate a visual explanation for the class label under consideration. Our extensive experiments and evaluations, both subjective and objective, on standard datasets showed that Grad-CAM++ indeed provides better visual explanations for a given CNN architecture when compared to Grad-CAM.</p></div>
 
 <a href="https://arxiv.org/pdf/1703.10593.pdf"><img style="float: left; padding: 10px; PADDING-RIGHT: 30px;" alt="paper thumbnail" src="images/paper_thumbnail.jpg" width=170></a>
 <br>
@@ -75,15 +65,16 @@ However, for many tasks, paired training data will not be available. We present 
 <p><a href="https://arxiv.org/abs/1703.10593">arxiv 1703.10593</a>,  2017. </p>
 
 
-
+<!--
 <h2>Citation</h2>
 <p>Jun-Yan Zhu*, Taesung Park*, Phillip Isola, and Alexei A. Efros. "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks", in IEEE International Conference on Computer Vision (ICCV), 2017.
 <br>(* indicates equal contributions)
 <a href="CycleGAN.txt">Bibtex</a>
 
 </p>
+-->
 
-
+<!--
 <h2>Code: <a href='https://github.com/junyanz/CycleGAN'> [Torch] </a>  <a href='https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix'> [PyTorch] </a> </h2>
 <br>
 <h2>Other Implementations</h2>
@@ -314,6 +305,7 @@ Researchers, developers and artists have tried our code on various image manipul
 <p>We thank Aaron Hertzmann, Shiry Ginosar, Deepak Pathak, Bryan Russell, Eli Shechtman, Richard Zhang, and Tinghui Zhou for many helpful comments. This work was supported in part by NSF SMA-1514512, NSF IIS-1633310, a Google Research Award, Intel Corp, and hardware donations from NVIDIA. JYZ is supported by the Facebook Graduate Fellowship and TP is supported by the Samsung Scholarship. The photographs used in style transfer were taken by AE, mostly in France.</p>
 
 <div style="display:none">
+-->
 <!-- GoStats JavaScript Based Code -->
 <script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
 <script type="text/javascript">_gos='c3.gostats.com';_goa=390583;
