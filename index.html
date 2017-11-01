@@ -55,6 +55,10 @@ BODY {
 <h2>Abstract</h2>
 
 <div style="font-size:14px"><p>Over the last decade, Convolutional Neural Network (CNN) models have been highly successful in solving complex vision based problems. However, deep models are perceived as "black box" methods considering the lack of understanding of their internal functioning. There has been a significant recent interest to develop explainable deep learning models, and this paper is an effort in this direction. Building on a recently proposed method called Grad-CAM, we propose Grad-CAM++ to provide better visual explanations of CNN model predictions (when compared to Grad-CAM), in terms of better localization of objects as well as explaining occurrences of multiple objects of a class in a single image. We provide a mathematical explanation for the proposed method, Grad-CAM++, which uses a weighted combination of the positive partial derivatives of the last convolutional layer feature maps with respect to a specific class score as weights to generate a visual explanation for the class label under consideration. Our extensive experiments and evaluations, both subjective and objective, on standard datasets showed that Grad-CAM++ indeed provides better visual explanations for a given CNN architecture when compared to Grad-CAM.</p></div>
+<center><a href="object_localization.png">
+<img src="object_localization.png" width="1000"> </a></center>
+<div style="font-size:14px"><p>Some visual examples depicting the object localization capabilities of both Grad-CAM and Grad-CAM++. The results are for E<sup>c</sup>(&delta; = 0.25). The green boxes represent ground truth annotations for the images.</p></div>
+
 <!--
 <a href="https://arxiv.org/pdf/1703.10593.pdf"><img style="float: left; padding: 10px; PADDING-RIGHT: 30px;" alt="paper thumbnail" src="images/paper_thumbnail.jpg" width=170></a>
 <br>
